@@ -3,14 +3,24 @@ body {
     font-family: Raleway, sans-serif; 
 }
 
+h1,
+h2 {
+    font-size: 1.3rem;
+}
+
 label i,
 p i,
 .stars-full {
     color: #0065FC;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .stars-void {
-    color: #DEEBFF
+    color: #DEEBFF;
 }
 
 /* Nav */
@@ -18,10 +28,13 @@ nav img {
     width: 90px;
 }
 
+nav figure {
+    margin: 0;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
-
 }
 
 nav ul {
@@ -30,65 +43,207 @@ nav ul {
 }
 
 nav li {
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+nav a {
+    color: #0065FC;
 }
 
 /* Header */
+header section h1 { 
+    margin-bottom: -0.5rem;
+}
+
+form i {
+    padding: 0.8rem;
+    background-color: #F2F2F2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+}
+
+label p {                                               /* Comment ajouter un espace à droite de l'icône ? */
+    border-bottom: 2px solid #F2F2F2;
+    border-top: 2px solid #F2F2F2;
+    border-right: 2px solid #F2F2F2;
+    padding-right: 1rem;
+    border-radius: 20px;
+}
+
+.search,
+.search-blue {
+    padding: 0.8rem;
+}
+
+.search {
+    width: 235px;
+    border: 0;
+    border-bottom: 1px solid #F2F2F2;
+    border-top: 1px solid #F2F2F2;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.search-blue {
+    background-color: #0065FC;
+    color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-weight: bold;
+    border: 0;
+}
+
 .filtre {
     display: flex;
     align-items: baseline;
 }
 
-label {
-    font-weight: bold;
-    margin-right: 3em;
-    margin-left: 3em;
+.filtres-style {
+    padding: 0.8rem;                                
+    border-radius: 20px;
+    background-color: #DEEBFF;
+}
+
+.info {
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
 }
 
 /* Main */
-main {
+main {                                                                /* LIEN PASSE PARTOUT <!> */
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: flex-end;
+    
+}
+
+main section h2 {
+    margin-left: 2.5rem;
 }
 
 .populaire,
 .hebergement {
-    background-color: #F2F2F2;
+    background-color: #F2F2F2;                                  
+    border-radius: 20px;
 }
 
-.images-pop img {
-    width: 100%;
-    height: 9rem;
+.populaire {
+    margin-left: 2.5rem;
 }
 
-.images-heb img {
-    width: 13rem;
-    height: 7rem;
+.hebergement {
+    width: 1000px;
+}
+.cadre-heb {
+    background-color: white;                            /* réduire encadrement à droite des images */
+    padding: 0.2rem;
+    border-radius: 20px;
+    line-height: 0.5rem;
 }
 
 .images-heb {
     display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.cadre-pop {
+    display: flex;
+    padding: 0.2rem;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.cadre-pop figcaption {
+    width: 220px;
+    padding-left: 0.8rem;
+    line-height: 1rem;
+}
+
+.images-pop {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.images-pop img {
+    width: 7rem;
+    height: 8rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.images-heb img {                                   /* utiliser les rem est-il vraiment la bonne solution pour formater l'image? */
+    width: 13rem;
+    height: 6rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.i-pop {
+    margin-left: 6.5rem;
+}
+
+.afficher-plus {
+    font-weight: bold;
+    margin-left: 2.5rem;
+}
+
+/* Article */
+article section {
+    display: flex;
     flex-wrap: wrap;
 }
 
-article {
-    display: flex;
+article img {
+    width: 16rem;
+    height: 100%;
+    margin-left: -2rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-article img {
-    height: 15rem;
-    width: 100%;
+article figcaption {
+    margin-left: -2rem;
+    padding-left: 1rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 4px 4px 1px #F2F2F2;   /* SHADOW tout autour de la figcaption ?? */
+}
+
+article p {
+    font-weight: bold;
 }
 
 /* Footer */
 footer {
-    background-color: #F2F2F2;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start; 
+    align-items: baseline;
+    background-color: #F2F2F2;          
 }
 
-section ul {                /* pourquoi cibler avec une classe ne marche pas ? */
+section ul {          
     list-style: none;
+    line-height: 1.5rem;
+    margin-right: 15rem;
+    
+}
+
+section li {
+    margin-left: -2.2rem;
 }
