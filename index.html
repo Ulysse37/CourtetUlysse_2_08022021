@@ -39,7 +39,7 @@
         </section>
         <section class="filtre">
             <h2>Filtres</h2>     
-            <label>                                                                         <!--Erreur WC3 <p> dans <label>-->
+            <label>                                                                         
                 <i class="fas fa-money-bill-wave filtres-style"></i>Économique            
             </label>
             <label>
@@ -54,7 +54,7 @@
         </section>
         <p><i class="fas fa-info info"></i>Plus de 500 logements sont disponibles dans cette ville</p>    
     </header>
-    <main>       
+    <main>      
         <section class="populaire">
             <h2>Les plus populaires<i class="fas fa-chart-line i-pop"></i></h2>
             <figure class="images-pop">  <!--On sépare le titre des images-->
@@ -107,7 +107,11 @@
             <figure class="images-heb"> <!--Images à part-->
                 <a href="#">
                     <figure class="cadre-heb">                    
-                        <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="auberge cannebière">
+                        <picture>   <!--balise picture pour mettre différentes images en fonction de la taille de l'écran-->
+                            <source srcset="images/hebergements/phone/marcus-loke-WQJvWU_HZFo-unsplash.jpg"  
+                                    media="(max-width: 576px)">
+                            <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="auberge cannebière">
+                        </picture>
                         <figcaption>
                             <h3>Auberge la Cannebière</h3>
                             <p>Nuit à partir de <b>25€</b></p>
@@ -121,7 +125,11 @@
                 </a>
                 <a href="#">
                     <figure class="cadre-heb">
-                        <img src="images/hebergements/Desktop/hotelduport.jpg" alt="Hôtel du port">
+                        <picture>
+                            <source srcset="images/hebergements/phone/fred-kleber-gTbaxaVLvsg-unsplash.jpg"  
+                                    media="(max-width: 576px)">
+                            <img src="images/hebergements/Desktop/hotelduport.jpg" alt="Hôtel du port">
+                        </picture>
                         <figcaption>
                             <h3>Hôtel du port</h3>
                             <p>Nuit à partir de <b>52€</b></p>
@@ -135,7 +143,11 @@
                 </a>
                 <a href="#">
                     <figure class="cadre-heb">
-                        <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel les mouettes">
+                        <picture>
+                            <source srcset="images/hebergements/phone/reisetopia-B8WIgxA_PFU-unsplash.jpg"  
+                                    media="(max-width: 576px)">
+                            <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Hôtel les mouettes">
+                        </picture>
                         <figcaption>
                             <h3>Hôtel les mouettes</h3>
                             <p>Nuit à partir de <b>76€</b></p>
@@ -149,7 +161,11 @@
                 </a>
                 <a href="#">
                     <figure class="cadre-heb">
-                        <img src="images/hebergements/Desktop/hoteldelamer.jpg" alt="Hôtel de la mer">
+                        <picture>
+                            <source srcset="images/hebergements/phone/annie-spratt-Eg1qcIitAuA-unsplash.jpg"  
+                                    media="(max-width: 576px)">
+                            <img src="images/hebergements/Desktop/hoteldelamer.jpg" alt="Hôtel de la mer">
+                            </picture>
                         <figcaption>
                             <h3>Hôtel de la mer</h3>
                             <p>Nuit à partir de <b>46€</b></p>
@@ -163,7 +179,11 @@
                 </a>
                 <a href="#">
                     <figure class="cadre-heb">
-                        <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge le panier">
+                        <picture>
+                            <source srcset="images/hebergements/phone/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"  
+                                    media="(max-width: 576px)">
+                            <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Auberge le panier">
+                            </picture>
                         <figcaption>
                             <h3>Auberge Le Panier</h3> 
                             <p>Nuit à partir de <b>23€</b></p>
@@ -177,7 +197,11 @@
                 </a>
                 <a href="#">
                     <figure class="cadre-heb">
-                        <img src="images/hebergements/Desktop/Amina.jpg" alt="Hôtel chez Amina">
+                        <picture>
+                            <source srcset="images/hebergements/phone/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"  
+                                    media="(max-width: 576px)">
+                            <img src="images/hebergements/Desktop/Amina.jpg" alt="Hôtel chez Amina">
+                            </picture>
                         <figcaption>
                             <h3>Hôtel chez Amina</h3>
                             <p>Nuit à partir de <b>96€</b></p>
@@ -198,7 +222,11 @@
         <figure class="images-act">
             <a href="#" class="box1">
                 <figure>
-                    <img src="images/activites/desktop/vieuxport.jpg" alt="Vieux port">
+                    <picture>
+                        <source srcset="images/activites/phone/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"  
+                                media="(max-width: 576px)">
+                        <img src="images/activites/desktop/vieuxport.jpg" alt="Vieux port">
+                    </picture>
                     <figcaption>
                         Vieux Port
                     </figcaption>
@@ -206,7 +234,11 @@
             </a>
             <a href="#" class="box2">
                 <figure>
-                    <img src="images/activites/desktop/pomègues.jpg" alt="Fort de Pomègues">
+                    <picture>
+                        <source srcset="images/activites/phone/paul-hermann-QFTrLdQIRhI-unsplash.jpg"  
+                                media="(max-width: 576px)">
+                        <img src="images/activites/desktop/pomègues.jpg" alt="Fort de Pomègues">
+                    </picture>
                     <figcaption>
                         Fort de Pomègues
                     </figcaption>
@@ -214,7 +246,11 @@
             </a>
             <a href="#" class="box3">
                 <figure>
-                    <img src="images/activites/desktop/Frioul.jpg" alt="Îles du Frioul">
+                    <picture>
+                        <source srcset="images/activites/phone/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg"  
+                                media="(max-width: 576px)">
+                        <img src="images/activites/desktop/Frioul.jpg" alt="Îles du Frioul">
+                    </picture>
                     <figcaption>
                         Îles du Frioul
                     </figcaption>
@@ -222,7 +258,11 @@
             </a>
             <a href="#" class="box4">
                 <figure>
-                    <img src="images/activites/desktop/Calanques.jpg" alt="Parc National des Calanques">
+                    <picture>
+                        <source srcset="images/activites/phone/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg"  
+                                media="(max-width: 576px)">
+                        <img src="images/activites/desktop/Calanques.jpg" alt="Parc National des Calanques">
+                    </picture>
                     <figcaption>
                         Parc National des Calanques
                     </figcaption>
@@ -230,7 +270,11 @@
             </a>
             <a href="#" class="box5">
                 <figure>
-                    <img src="images/activites/desktop/Notredamedelagarde.jpg" alt="Notre-Dame-de-la-Garde">
+                    <picture>
+                        <source srcset="images/activites/phone/florian-wehde-xW9e8gdotxI-unsplash.jpg"  
+                                media="(max-width: 576px)">
+                        <img src="images/activites/desktop/Notredamedelagarde.jpg" alt="Notre-Dame-de-la-Garde">
+                    </picture>
                     <figcaption>
                         Notre-Dame-de-la-Garde
                     </figcaption>
@@ -238,14 +282,18 @@
             </a>
             <a href="#" class="box6">
                 <figure>
-                    <img src="images/activites/desktop/longchamp.jpg" alt="Parc Longchamp">
+                    <picture>
+                        <source srcset="images/activites/phone/lena-paulin-wH2-EJoDcV0-unsplash.jpg"  
+                                media="(max-width: 576px)">
+                        <img src="images/activites/desktop/longchamp.jpg" alt="Parc Longchamp">
+                    </picture>
                     <figcaption>
                         Parc Longchamp
                     </figcaption>
                 </figure>
             </a>
         </figure>
-    </article>    
+    </article>
     <footer>
         <section>          
             <h3>A propos</h3>                           

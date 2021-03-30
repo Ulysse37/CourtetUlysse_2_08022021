@@ -11,8 +11,6 @@ label {
 
 footer {
     display: flex;
-    justify-content: flex-start; 
-    align-items: baseline;  
     padding-top: 2rem;
     background-color: #F2F2F2;  
 }
@@ -22,7 +20,7 @@ body {
     margin: 0;
 }
 
-main {                                                                /* LIEN PASSE PARTOUT <!> */
+main {                                                                
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -57,9 +55,11 @@ article {
     margin-bottom: 7rem;
 }
 
-article figcaption {                    /* Comment décaler le texte sur la droite sans mettre de <p> ? */
+article figcaption {                    
     margin-top: -0.2rem;
     width: 300px;
+    box-sizing: border-box;             /* décale le texte et le bloque dans le cadre */
+    padding-left: 1rem;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     border-bottom-left-radius: 20px;
@@ -129,18 +129,18 @@ p i,
     color: #0065FC;
 }
 
+main h2 {                      
+    margin-left: 2.5rem;
+    margin-bottom: 0.5rem;
+    padding-top: 1.8rem;
+}
+
 footer section {
     margin-left: 2.5rem;
 }
 
 section li {
     margin-left: -2.2rem;
-}
-
-main section h2 {
-    margin-left: 2.5rem;
-    margin-bottom: 0.5rem;
-    padding-top: 1.8rem;
 }
 
 header section h1,
@@ -237,14 +237,12 @@ header section p {
 
 .hebergement {
     width: 880px;
-    height: 625px;
     margin-left: 2.5rem;
 }
 
 .afficher-plus {
     font-weight: bold;
     margin-left: 2.5rem;
-    padding-bottom: -1rem;
 }
 
 .populaire,
@@ -291,7 +289,7 @@ header section p {
 }
 
 .stars-void {
-    color: #DEEBFF;
+    color: #F2F2F2;
 }
 
 .nav2 {
@@ -326,8 +324,8 @@ header section p {
     line-height: 1rem;
 }
 
-.hebergement a {
-    margin-right: -3.1rem;
+.hebergement figure {
+    margin-right: -0.5rem;
 }
 
 .box1 img {
@@ -342,7 +340,6 @@ header section p {
     height: 110px;
 }
 
-
 .box4 img {
     height: 390px;
 }
@@ -355,3 +352,164 @@ header section p {
     height: 152px;
 }
 
+
+@media only screen and (max-width: 576px) {
+
+    html {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    main {
+        display:flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: -2.5rem;
+        margin-top: 1.5rem;
+    }
+
+    article {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+        
+    }
+
+    main h2 {
+        margin-left: -0.1rem;
+    }
+
+    article h2 {
+        margin-left: -10rem;
+    }
+
+    article img {
+        max-width: 325px;
+        max-height: 135px;
+    }
+
+    article figcaption {
+        width: 325px
+    }
+
+    footer section {
+        white-space: nowrap;  /* autre méthode ?? */
+    }
+
+    footer li {
+        line-height: 2rem;
+    }
+
+    .afficher-plus {
+        margin-left: -11.5rem;
+    }
+
+    .populaire {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: 590px;
+        margin-right: -2.5rem;
+        border-radius: 0;
+    }
+
+    .hebergement{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: white;  
+    }
+
+    .images-pop {
+        margin-top: -1rem;
+    }
+
+    .images-act {                       
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0.1rem;
+        margin-top: 1rem;
+    }
+
+    .images-heb {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .cadre-pop {
+        width: 325px;
+        margin-left: 3.5rem;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .cadre-heb {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 0px 15px #d3d3d3;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6 {
+        margin-top: -2.5px;
+        margin-bottom: -2.5px;
+    }
+
+    .filtre {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hebergement img {
+        width: 325px;
+    }
+
+    .box3 img {
+        height: 135px;
+    }
+    
+    #ancre-hebergement {
+        margin-left: -1rem;
+    }
+    
+    
+    
+
+}
