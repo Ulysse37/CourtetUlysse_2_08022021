@@ -49,6 +49,7 @@ h2 {
 
 form {
     margin-left: 2.5rem;
+    margin-top: 2rem;
 }
 
 article {
@@ -76,7 +77,7 @@ article img {
 }
 
 form i {
-    padding: 0.8rem;
+    padding: 15px 19px 17px 19px;
     background-color: #F2F2F2;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -162,6 +163,7 @@ header section p {
 
 .search {
     width: 235px;
+    height: 48px;
     border: 0;
     border-bottom: 1px solid #F2F2F2;
     border-top: 1px solid #F2F2F2;
@@ -170,6 +172,7 @@ header section p {
 }
 
 .search-blue {
+    height: 48px;
     background-color: #0065FC;
     color: white;
     border-top-right-radius: 15px;
@@ -288,6 +291,10 @@ header section p {
     grid-row: 1 / 2;
 }
 
+.search-icon {
+    display: none;
+}
+
 .stars-void {
     color: #F2F2F2;
 }
@@ -355,7 +362,7 @@ header section p {
 
 @media only screen and (max-width: 576px) {
 
-    html {
+    html {                                              /* tous les width 100% sont useless? */
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -377,6 +384,7 @@ header section p {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        margin-left: 1rem;
     }
     
     footer {
@@ -401,6 +409,23 @@ header section p {
         width: 100%;
         margin-bottom: 2rem;
         
+    }
+
+    label {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    button i {
+        color: white;
+        background-color: #0065FC;
+        padding: 0;
+        font-size: 1rem;
+        
+    }
+
+    header h2 {
+        margin-right: 20rem;
     }
 
     main h2 {
@@ -428,8 +453,18 @@ header section p {
         line-height: 2rem;
     }
 
-    .afficher-plus {
-        margin-left: -11.5rem;
+    .search-icon {
+        display: inline-block;
+        margin-left: -1rem;
+        padding-bottom: 2px;
+        width: 50px;
+        height: 48px;
+        border: 0;
+        background-color: #0065FC;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
     }
 
     .populaire {
@@ -442,17 +477,6 @@ header section p {
         border-radius: 0;
     }
 
-    .hebergement{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        background-color: white;  
-    }
-
-    .images-pop {
-        margin-top: -1rem;
-    }
-
     .images-act {                       
         display: flex;
         flex-wrap: wrap;
@@ -461,10 +485,18 @@ header section p {
         margin-top: 1rem;
     }
 
-    .images-heb {
+    .cadre-heb {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 0px 15px #d3d3d3;
+    }
+    .hebergement{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        background-color: white;  
     }
     
     .cadre-pop {
@@ -474,12 +506,26 @@ header section p {
         margin-top: 5px;
     }
 
-    .cadre-heb {
-        margin-bottom: 5px;
-        margin-top: 5px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        box-shadow: 0px 0px 15px #d3d3d3;
+    .images-heb {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .info-p {
+        margin-left: 5rem;
+        padding-left: 0;
+        line-height: 0;
+    }
+
+    .info {
+        margin-left: -2.5rem;
+        margin-right: 0.7rem;
+    }
+
+    .filtre {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .box1,
@@ -492,10 +538,18 @@ header section p {
         margin-bottom: -2.5px;
     }
 
-    .filtre {
-        display: flex;
-        flex-wrap: wrap;
+    .afficher-plus {
+        margin-left: -11.5rem;
     }
+
+    .images-pop {
+        margin-top: -1rem;
+    }
+
+    
+    .search-blue {              /* On remplace le boutton rechercher par le bouton avec l'icone */
+        display: none;
+    }   
 
     .hebergement img {
         width: 325px;
@@ -508,8 +562,133 @@ header section p {
     #ancre-hebergement {
         margin-left: -1rem;
     }
+}
+
+@media only screen and (min-width : 577px) and (max-width : 1024px) {
+    html {                                              /* tous les width 100% sont useless? */
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
     
+    main {
+        display:flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: -2.5rem;
+        margin-top: 1.5rem;
+    }
+        
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 1rem;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%; 
+    }
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    label {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
     
+    header h2 {
+        margin-right: 2rem;
+    }
+
+    article img {
+        width: 300px;
+        max-height: 135px;
+    }
     
+    article figcaption {
+        width: 300px
+    }
+
+    footer section {
+        white-space: nowrap;  /* autre méthode ?? */
+    }
+    .populaire {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        margin-right: -2.5rem;
+        border-radius: 0;
+    }
+
+    .cadre-heb {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0px 0px 15px #d3d3d3;
+    }
+
+    .images-act {                       
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-left: 0.1rem;
+        margin-top: 1rem;
+    }
+    
+    .images-pop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .hebergement{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;  
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6 {
+        margin-top: -2.5px;
+        margin-bottom: -2.5px;
+    }
+    
+    .filtre {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cadre-pop {
+        margin-right: 1rem;
+    }
+
+    .cadre-pop figcaption {
+        margin-right: 4rem;
+    }
+
+    .box3 img {
+        height: 135px;
+    }
 
 }
