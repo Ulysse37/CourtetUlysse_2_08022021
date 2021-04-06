@@ -110,6 +110,7 @@ nav figure {
 
 nav li {
     margin-left: 3rem;
+    padding-top: 15px;
 }
 
 nav a {
@@ -144,7 +145,7 @@ section li {
     margin-left: -2.2rem;
 }
 
-header section h1,
+h1,
 header section p {
     margin-left: 2.5rem;
 }
@@ -359,10 +360,14 @@ header section p {
     height: 152px;
 }
 
+.border-bottom-left {
+    border-top: #0065FC solid 2px;
+}
 
-@media only screen and (max-width: 576px) {
 
-    html {                                              /* tous les width 100% sont useless? */
+@media only screen and (max-width: 700px) {
+
+    html {                                              
         width: 100%;
         display: flex;
         flex-wrap: wrap;
@@ -377,9 +382,20 @@ header section p {
     nav {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         width: 100%;
     }
     
+    nav ul {
+        margin-right: 8rem;
+    }
+
+    nav figure {
+        margin-left: 5rem;
+        margin-right: 25rem;
+        margin-top: 5px;
+    }
+
     header {
         display: flex;
         flex-wrap: wrap;
@@ -390,7 +406,7 @@ header section p {
     footer {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: flex-start; /* IMPOSSIBLE A CENTRER ?! */
         width: 100%;
     }
 
@@ -425,7 +441,7 @@ header section p {
     }
 
     header h2 {
-        margin-right: 20rem;
+        margin-right: 22rem;
     }
 
     main h2 {
@@ -452,7 +468,7 @@ header section p {
     footer li {
         line-height: 2rem;
     }
-
+    
     .search-icon {
         display: inline-block;
         margin-left: -1rem;
@@ -559,12 +575,29 @@ header section p {
         height: 135px;
     }
     
+    .position-topright {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+    
+    .border-bottom-left {
+        border-bottom: solid #0065FC;
+        border-top: none;
+        padding-bottom: 15px;
+    }
+
+    .border-bottom-right {
+        padding-bottom: 15px;
+        border-bottom: #F2F2F2 solid;
+    }
+
     #ancre-hebergement {
         margin-left: -1rem;
     }
 }
 
-@media only screen and (min-width : 577px) and (max-width : 1024px) {
+@media only screen and (min-width : 701px) and (max-width : 1024px) {
     html {                                              /* tous les width 100% sont useless? */
         width: 100%;
         display: flex;
