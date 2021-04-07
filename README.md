@@ -5,7 +5,7 @@ Voici mon code pour ce projet ayant pour but de transformer une maquette donnée
 ![Logo du site](/images/logo/Reservia@3x.png)
 
 Il doit être adapté aux :
-- Ecrans larges
+- Écrans larges
 - Téléphones
 - Tablettes
 
