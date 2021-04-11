@@ -15,6 +15,7 @@ article {
 
 footer {
     display: flex;
+    justify-content: space-between;
     padding-top: 2rem;
     background-color: #F2F2F2;  
 }
@@ -40,13 +41,15 @@ h2 {
 }
 
 label {       
-    margin-right: 1rem;
+    margin-right: 3rem;
     margin-left: 1.5rem;                                        
     border-bottom: 2px solid #F2F2F2;
     border-top: 2px solid #F2F2F2;
     border-right: 2px solid #F2F2F2;
     border-radius: 20px;
     padding-right: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.6rem;
     font-weight: bold;
 }
 
@@ -95,7 +98,6 @@ article img {
 }
 
 section ul {          
-    margin-right: 15rem; 
     list-style: none;
     line-height: 1.5rem;
 }
@@ -122,6 +124,15 @@ nav a {
     color: #0065FC;
 }
 
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header li {
+    margin-bottom: 1rem;
+}
+
 label i {
     margin-right: 1rem;
 }
@@ -138,6 +149,12 @@ p i,
 
 footer section {
     margin-left: 2.5rem;
+}
+
+footer figure {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
 }
 
 section li {
@@ -363,8 +380,169 @@ header section p {
     border-top: #0065FC solid 2px;
 }
 
+@media (max-width : 1199px) {
+    html {                                              /* tous les width 100% sont useless? */
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+        
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 1rem;
+    }
 
-@media only screen and (max-width: 700px) {
+    main {
+        display:flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: -2.5rem;
+        margin-top: 1.5rem;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-around;
+        width: 100%; 
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    label {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    main h2 {
+        margin-left: 0;
+    }
+
+    article h2 {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        margin-top: 2.5rem;
+        padding: 0;
+
+    }
+
+    article img {
+        width: 325px;
+        max-height: 135px;
+    }
+    
+    header h2 {
+        margin-right: 2rem;
+    }
+
+    article figcaption {
+        width: 300px
+    }
+
+    footer section {
+        white-space: nowrap;  /* autre méthode ?? */
+        margin: 0;
+    }
+    .populaire {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-right: -2.5rem;
+        border-radius: 0;
+    }
+
+    .cadre-heb {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        box-shadow: 0px 0px 15px #d3d3d3;
+    }
+
+    .images-act {                       
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0.1rem;
+        margin-top: 1rem;
+    }
+    
+    .images-pop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hebergement{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: white;  
+        width: auto;
+    }
+
+    .images-heb {
+        display: flex;
+        justify-content: center;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6 {
+        margin-top: -2.5px;
+        margin-bottom: -2.5px;
+    }
+    
+    .filtre {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hebergement figure {
+        margin-right: 2.5rem;
+        margin-left: 2.5rem;
+    }
+
+    .cadre-pop {
+        margin-right: 1rem;
+    }
+
+    .cadre-pop figcaption {
+        margin-right: 4rem;
+    }
+
+    .box3 img {
+        height: 135px;
+    }
+    
+    .afficher-plus {
+        margin: 0;
+        margin-top: 2rem;
+    }
+
+}
+
+@media (max-width: 767px) {
 
     html {                                              
         display: flex;
@@ -403,11 +581,10 @@ header section p {
     }
 
     footer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start; /* IMPOSSIBLE A CENTRER ?! */
         width: 100%;
     }
+
+    
 
     nav {
         display: flex;
@@ -417,7 +594,12 @@ header section p {
     }
     
     nav ul {
-        margin-right: 8rem;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav li {
+        margin: 0;
     }
 
     nav figure {
@@ -438,16 +620,12 @@ header section p {
         background-color: #0065FC;
     }
 
-    header h2 {
-        margin-right: 22rem;
-    }
-
     main h2 {
         margin-left: -0.1rem;
     }
 
     article h2 {
-        margin-left: -10rem;
+        margin-left: -8rem;
     }
 
     article img {
@@ -460,9 +638,17 @@ header section p {
     }
 
     footer section {
-        white-space: nowrap;  /* autre méthode ?? */
+        white-space: nowrap;
+        margin-left: 2.5rem;
     }
 
+    footer figure {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
     footer li {
         line-height: 2rem;
     }
@@ -510,12 +696,14 @@ header section p {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        width: 100%;
+        margin-right: -2.5rem;
         background-color: white;  
     }
-    
+
     .cadre-pop {
         width: 325px;
-        margin-left: 3.5rem;
+        margin-right: 2.5rem;
         margin-bottom: 5px;
         margin-top: 5px;
     }
@@ -533,14 +721,18 @@ header section p {
     }
     
     .border-bottom-left {
+        width: 50%;
         border-bottom: solid #0065FC;
         border-top: none;
         padding-bottom: 15px;
+        text-align: center;
     }
 
     .border-bottom-right {
+        width: 50%;
         border-bottom: #F2F2F2 solid;
         padding-bottom: 15px;
+        text-align: center;
     }
 
     .info-p {
@@ -554,11 +746,6 @@ header section p {
         margin-right: 0.7rem;
     }
 
-    .filtre {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .box1,
     .box2,
     .box3,
@@ -569,8 +756,11 @@ header section p {
         margin-bottom: -2.5px;
     }
 
+    .cadre-pop figcaption {
+        margin: 0;
+    }
     .afficher-plus {
-        margin-left: -11.5rem;
+        margin-left: -14rem;
     }
 
     .images-pop {
@@ -590,159 +780,7 @@ header section p {
     }
     
     #ancre-hebergement {
-        margin-left: -1rem;
+        margin-left: -4rem;
     }
 }
 
-@media only screen and (min-width : 701px) and (max-width : 1024px) {
-    html {                                              /* tous les width 100% sont useless? */
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-    
-    body {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-        
-    header {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-left: 1rem;
-    }
-
-    main {
-        display:flex;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-left: -2.5rem;
-        margin-top: 1.5rem;
-    }
-
-    footer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        width: 100%; 
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    label {
-        margin-left: 0;
-        margin-bottom: 1rem;
-    }
-    
-    article h2 {
-        display: flex;
-        justify-content: center;
-        margin-left: -3rem;
-    }
-
-    article img {
-        width: 300px;
-        max-height: 135px;
-    }
-    
-    header h2 {
-        margin-right: 2rem;
-    }
-
-    article figcaption {
-        width: 300px
-    }
-
-    footer section {
-        white-space: nowrap;  /* autre méthode ?? */
-    }
-    .populaire {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-        height: auto;
-        margin-right: -2.5rem;
-        border-radius: 0;
-    }
-
-    .cadre-heb {
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        margin-bottom: 5px;
-        margin-top: 5px;
-        box-shadow: 0px 0px 15px #d3d3d3;
-    }
-
-    .images-act {                       
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 0.1rem;
-        margin-top: 1rem;
-    }
-    
-    .images-pop {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hebergement{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        background-color: white;  
-    }
-
-    .images-heb {
-        display: flex;
-        justify-content: center;
-    }
-
-    .box1,
-    .box2,
-    .box3,
-    .box4,
-    .box5,
-    .box6 {
-        margin-top: -2.5px;
-        margin-bottom: -2.5px;
-    }
-    
-    .filtre {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .cadre-pop {
-        margin-right: 1rem;
-    }
-
-    .cadre-pop figcaption {
-        margin-right: 4rem;
-    }
-
-    .box3 img {
-        height: 135px;
-    }
-
-    .populaire h2 {
-        margin-left: 7rem;
-    }
-
-    .hebergement h2 {
-        margin-left: 11rem;
-    }
-
-    .afficher-plus {
-        margin-left: 0.5rem;
-    }
-}
