@@ -381,7 +381,7 @@ header section p {
 }
 
 @media (max-width : 1199px) {
-    html {                                              /* tous les width 100% sont useless? */
+    html {                                              
         display: flex;
         flex-wrap: wrap;
         width: 100%;
