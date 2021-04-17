@@ -42,12 +42,12 @@ h2 {
 }
 
 label {       
-    margin-right: 3rem;
-    margin-left: 1.5rem;                                        
     border-bottom: 2px solid #F2F2F2;
     border-top: 2px solid #F2F2F2;
     border-right: 2px solid #F2F2F2;
     border-radius: 20px;
+    margin-right: 3rem;
+    margin-left: 1.5rem;                                        
     padding-right: 1rem;
     padding-top: 0.7rem;
     padding-bottom: 0.6rem;
@@ -81,7 +81,7 @@ article h2 {
 }
 
 article figcaption {                    
-    width: 380px;
+    width: 95%;
     box-sizing: border-box;             /* décale le texte et le bloque dans le cadre */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -94,7 +94,7 @@ article figcaption {
 }
 
 article img {
-    width: 380px;
+    width: 95%; 
     height: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -171,11 +171,11 @@ header section p {
 }
 
 .info {
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
     margin-right: 1rem;
     margin-bottom: 1rem;
     margin-left: 4rem;
-    border: 2px solid #F2F2F2;
-    border-radius: 20px;
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     padding-top: 0.3rem;
@@ -203,13 +203,13 @@ header section p {
 }
 
 .cadre-heb {
+    width: 280px;
     border-radius: 20px;                         
+    margin-right: 0;
     padding: 0.3rem;
     line-height: 0.5rem;
     font-size: 0.9rem;  
     background-color: white;   
-    margin-right: 0;
-    width: 280px;
 }
 
 .images-heb {
@@ -245,7 +245,7 @@ header section p {
 
 .images-act {
     display: grid;
-    grid-template-columns: 440px 440px 440px 300px;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
     grid-template-rows: 200px 200px;
     margin: 0;
     margin-left: 2rem;
@@ -279,9 +279,9 @@ header section p {
 
 .populaire {
     height: 625px;
+    min-width: 375px;
     margin-left: 4rem;
     width: 28%;
-    min-width: 375px;
 }
 
 .hebergement {
@@ -489,8 +489,8 @@ header section p {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        background-color: white;  
         width: auto;
+        background-color: white;  
     }
 
     .images-heb {
@@ -625,12 +625,12 @@ header section p {
         display: inline-block;
         width: 50px;
         height: 48px;
-        margin-left: -1rem;
-        border: 0;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
+        margin-left: -1rem;
+        border: 0;
         padding-bottom: 2px;
         background-color: #0065FC;
     }
